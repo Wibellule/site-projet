@@ -1,0 +1,4 @@
+services:
+#    wibellule_core.example:
+#        class: Wibellule\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

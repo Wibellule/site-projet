@@ -1,0 +1,4 @@
+services:
+#    wibellule_user.example:
+#        class: Wibellule\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

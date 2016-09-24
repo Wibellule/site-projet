@@ -1,0 +1,11 @@
+wibellule_blog_homepage:
+    path:     /blog/{page}
+    defaults: { _controller: WibelluleBlogBundle:Default:index, _page: 1 }
+    requirements:
+        page: \d*
+
+wibellule_blog_detail:
+    path: /blog/{url}.{format}
+    defaults: { _controller: WibelluleBlogBundle:Default:detailsArticle, _format: html }
+    requirements:
+        format: html

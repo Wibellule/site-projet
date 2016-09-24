@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Wibellule - Welcome !{% endblock %}</title>
+        {{ include('WibelluleCoreBundle:Default:stylesheets.html.twig') }}
+    </head>
+    <body id="top" class="scrollspy">
+
+        {% block navigation %}
+            {{ include('WibelluleCoreBundle:Default:menu.html.twig') }}
+        {% endblock %}
+
+        {% block body %}{% endblock %}
+
+        {% block footer %}
+            {{ include('WibelluleCoreBundle:Default:footer.html.twig') }}
+        {% endblock %}
+
+        {% block script_core_layout %}
+            {{ include('WibelluleCoreBundle:Default:scripts.html.twig') }}
+        {% endblock %}
+
+    </body>
+
+</html>
+

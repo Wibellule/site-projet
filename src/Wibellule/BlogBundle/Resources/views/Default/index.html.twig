@@ -1,0 +1,40 @@
+{% extends 'WibelluleBlogBundle::layout.html.twig' %}
+
+{% block body %}
+
+    {{ parent() }}
+
+    <div class="section scrollspy" id="blog">
+        <div class="container">
+            <div class="row">
+
+                {% for article in articles %}
+                    <div class="col s12 m4 l4">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="{{ asset('img/project1.jpg') }}">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">{{ article.nom }} <i class="mdi-navigation-more-vert right"></i></span>
+                                <span>
+                                    <a href="{{ path('wibellule_blog_detail', { 'url' : article.url, 'format' : 'html'}) }}" class="lecture waves-effect waves-light red darken-1 btn">Lire</a>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">{{ article.nom }} <i class="mdi-navigation-close right"></i></span>
+                                <p>{{ article.contenu }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            {% block pagination %}
+                {{ include('WibelluleBlogBundle:Default:pagination.html.twig', { 'nbPerPage': nbPerPage, 'page': page}) }}
+            {% endblock %}
+
+        </div>
+    </div>
+
+{% endblock %}

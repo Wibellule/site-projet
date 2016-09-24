@@ -1,0 +1,19 @@
+{% extends 'WibelluleCoreBundle::layout.html.twig' %}
+
+{% block body %}
+
+    {{ parent() }}
+
+    {% block hero %}
+        {{ include('WibelluleCoreBundle:Default:blockhero.html.twig') }}
+    {% endblock %}
+
+    {% block blog %}
+        {{ include('WibelluleCoreBundle:Default:blog.html.twig') }}
+    {% endblock %}
+
+    {% block work %}
+        {{ include('WibelluleCoreBundle:Default:work.html.twig') }}
+    {% endblock %}
+
+{% endblock %}

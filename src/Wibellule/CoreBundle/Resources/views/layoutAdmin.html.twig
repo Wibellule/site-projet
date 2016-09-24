@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Wibellule Admin - Welcome !{% endblock %}</title>
+    {{ include('WibelluleCoreBundle:Admin:stylesheets.html.twig') }}
+    {{ include('WibelluleCoreBundle:Admin:extracss.html.twig') }}
+</head>
+<body id="top" class="scrollspy">
+
+    {% block header_admin %}
+        {{ include('WibelluleCoreBundle:Admin:header.html.twig') }}
+    {% endblock %}
+
+    {% block navigation_admin %}
+        {{ include('WibelluleCoreBundle:Admin:navigation.html.twig') }}
+    {% endblock %}
+
+    {% block body %}{% endblock %}
+
+    {% block script_admin_core_layout %}
+        {{ include('WibelluleCoreBundle:Admin:scripts.html.twig') }}
+    {% endblock %}
+
+</body>
+
+</html>
